@@ -1,0 +1,26 @@
+# Android and Gradle build output
+.gradle/
+build/
+app/build/
+
+# Local machine configuration
+local.properties
+
+# Test APKs and generated packages
+outputs/
+*.apk
+*.aab
+*.idsig
+
+# Server local data and secrets
+server/data/
+server/.env
+*.log
+
+# IDE files
+.idea/
+*.iml
+
+# OS files
+Thumbs.db
+.DS_Store

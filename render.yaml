@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: valhalla-rage-server
+    runtime: docker
+    region: frankfurt
+    plan: free
+    dockerContext: ./server
+    dockerfilePath: ./server/Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VALHALLA_DATA_DIR
+        value: /app/data
+      - key: VALHALLA_PROOF_RETENTION_HOURS
+        value: "24"
+      - key: VALHALLA_SERVER_SECRET
+        generateValue: true
+      - key: OPENAI_MODEL
+        value: gpt-5
+      - key: OPENAI_MODERATION_MODEL
+        value: omni-moderation-latest
