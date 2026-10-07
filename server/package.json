@@ -1,0 +1,14 @@
+{
+  "name": "valhalla-rage-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Serveur local de test pour VALHALLA RAGE.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test-server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
